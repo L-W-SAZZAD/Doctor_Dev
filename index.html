@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor</title>
+
+    <!-- tailwind cdn link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind cdn link -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- font link -->
+    <script
+      src="https://kit.fontawesome.com/1deda58036.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font link -->
+    <!-- swiper js link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- swiper js link  -->
+    <link rel="stylesheet" href="css/evo-calendar.css" />
+    <link rel="stylesheet" href="css/evo-calendar.midnight-blue.css" />
+
+    <!-- css link here -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- css link here -->
+  </head>
+  <body>
+    <!-- navbar  -->
+    <div
+      class="bg_nav_here fixed z-50 w-full top-0 left-0 border-b-[1px] shadow bg-slate-900"
+    >
+      <div class="nav_container lg:w-[1120px] lg:mx-auto w-full lg:px-0 px-3">
+        <div
+          class="nav_wrapper lg:flex md:flex flex lg:justify-between lg:items-center md:justify-between md:items-center py-3 justify-between items-center"
+        >
+          <!-- {/*--------------- nav_logo------------ */} -->
+
+          <div class="nav_logo">
+            <h2 class="text-black text-lg font-medium">
+              <div
+                class="w-[60px] h-[60px] rounded-full bg-white flex justify-center items-center"
+              >
+                <img
+                  class="w-[40px] h-[40px]"
+                  src="./assets/doctor_profile.png"
+                  alt=""
+                />
+              </div>
+            </h2>
+          </div>
+
+          <!-- {/* ---------------nav_logo------------ */} -->
+          <!-- {/*--------------- menu items----------- */} -->
+          <div class="">
+            <ul
+              id="mobile_device"
+              class="lg:flex gap-5 lg:static lg:bg-inherit rounded-lg absolute top-[200px] left-[-900px] lg:w-static w-[60%] bg-slate-900 lg:shadow-none shadow-md shadow-blue-500 duration-500"
+            >
+              <a href="#">
+                <li
+                  class="text-black text-lg font-bold tracking-wider px-3 py-1 rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white"
+                >
+                  Home
+                </li>
+              </a>
+
+              <a href="#services">
+                <li
+                  class="text-black text-lg font-bold tracking-wider px-3 py-1 rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white"
+                >
+                  Services
+                </li>
+              </a>
+
+              <a href="#appointment">
+                <li
+                  class="text-black text-lg font-bold tracking-wide px-3 py-1 rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white"
+                >
+                  Appointment
+                </li>
+              </a>
+              <a href="#appointment">
+                <li
+                  class="text-black text-lg font-bold tracking-wide px-3 py-1 rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white bg-blue-500"
+                >
+                  Contact
+                </li>
+              </a>
+            </ul>
+          </div>
+          <!-- {/*-------------- menu items------------ */} -->
+          <!-- {/* mobile menu */} -->
+          <div class="lg:hidden cursor-pointer">
+            <div id="openBtn" onclick="openClick()" class="lg:hidden block">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="2em"
+                viewBox="0 0 448 512"
+                fill="blue"
+              >
+                <path
+                  d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                />
+              </svg>
+            </div>
+            <div
+              class="hidden cursor-pointer"
+              id="closeBtn"
+              onclick="closeClick()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="2em"
+                viewBox="0 0 384 512"
+                fill="red"
+              >
+                <path
+                  d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- {/* mobile menu */} -->
+        </div>
+      </div>
+    </div>
+    <!-- navbar  -->
+
+    <!--    Hero Section  -->
+    <div
+      class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 pt-[150px]"
+    >
+      <div class="flex justify-between items-center gap-5">
+        <div class="head_right lg:w-1/2 w-full">
+          <h2
+            class="text-4xl text-blue-500 font-bold pb-2 lg:text-start text-center"
+          >
+            Dr Merry Stone
+          </h2>
+          <p
+            class="pb-5 text-base text-gray-600 lg:text-start text-center lg:w-full max-w-[500px] lg:mx-0 mx-auto"
+          >
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas
+            dolorum veniam id fugit amet ut, unde odio. Corporis, excepturi
+            reiciendis?
+          </p>
+          <div class="list_items max-w-[500px] lg:mx-0 mx-auto">
+            <div class="flex gap-4 pb-2 items-center justify-start">
+              <div class="list_icon flex items-center gap-1 w-1/2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-gray-600">Personal consultations</li>
+              </div>
+              <div class="list_icon flex items-center gap-1 w-1/2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-gray-600">Unique Technique</li>
+              </div>
+            </div>
+            <div class="flex gap-4 pb-2 items-center justify-start">
+              <div class="list_icon flex items-center gap-1 w-1/2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-gray-600">Group Therapy</li>
+              </div>
+              <div class="list_icon flex items-center gap-1 w-1/2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-gray-600">Couple Problem</li>
+              </div>
+            </div>
+            <div class="list_icon flex items-center gap-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1.25em"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  style="fill: #f95d5ddd"
+                  d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                />
+              </svg>
+              <li class="text-gray-600">Online Therapy</li>
+            </div>
+          </div>
+          <div class="mt-5 lg:text-start text-center">
+            <button
+              class="bg-[#f95d5ddd] px-5 py-2 text-lg rounded-lg hover:bg-blue-500 hover:text-[#fff] duration-500 text-white font-bold"
+            >
+              Appointment Now
+            </button>
+          </div>
+        </div>
+        <div
+          class="head_left lg:w-1/2 relative lg:flex flex-col justify-center items-center hidden"
+        >
+          <img
+            src="./assets/doctor.jpg"
+            alt="doctor"
+            class="object-cover z-30 relative -top-5 rounded-tl-[100px] rounded-br-[100px] w-[80%] h-[400px]"
+          />
+          <div
+            class="w-[80%] h-[400px] bg-blue-500 absolute top-[0px] right-0 z-10"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <!--    Hero Section  -->
+
+    <!-- services section -->
+    <div id="services" class="bg-color">
+      <div
+        class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 lg:py-20 py-8"
+      >
+        <h1 class="text-center text-4xl tracking-wide font-semibold text-black">
+          Services
+        </h1>
+        <p
+          class="text-center lg:w-[500px] w-full mx-auto pt-5 pb-20 text-gray-400"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
+          dolor dignissimos reprehenderit enim explicabo laudantium quia
+          ex,Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem,
+          iure.
+        </p>
+        <div class="pricing_wrapper grid lg:grid-cols-3 gap-8">
+          <div
+            class="pricing_cart bg-white shadow-md flex flex-col justify-center items-center py-16 rounded-lg lg:hover:-translate-y-5 relative duration-500 transition-all"
+          >
+            <h2 class="text-2xl font-semibold pb-5 tracking-wide text-black">
+              Light Session
+            </h2>
+            <p class="text-4xl font-extrabold text-blue-500 pb-10">$150</p>
+            <div class="list_items">
+              <div class="list_icon flex items-center gap-1 pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-black">6 session/month</li>
+              </div>
+              <div class="list_icon flex items-center gap-1 pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-black">Duration 30 minutes</li>
+              </div>
+              <div class="list_icon flex items-center gap-1 pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-black">group Meettng</li>
+              </div>
+              <div class="list_icon flex items-center gap-1 pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-gray-500">Personal Meeting</li>
+              </div>
+              <div class="list_icon flex items-center gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-gray-500">Support 24 hours</li>
+              </div>
+              <div class="pt-5">
+                <button
+                  class="border-[1px] border-blue-500 outline-none py-2 px-8 rounded-full text-lg font-medium text-blue-500 hover:bg-blue-500 hover:text-white duration-200"
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pricing_cart bg-white shadow-md flex flex-col justify-center items-center py-16 rounded-lg lg:hover:-translate-y-5 relative duration-500 transition-all"
+          >
+            <h2 class="text-2xl font-semibold pb-5 tracking-wide text-black">
+              Light Session
+            </h2>
+            <p class="text-4xl font-extrabold text-blue-500 pb-10">$150</p>
+            <div class="list_items">
+              <div class="list_icon flex items-center gap-1 pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-black">6 session/month</li>
+              </div>
+              <div class="list_icon flex items-center gap-1 pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-black">Duration 30 minutes</li>
+              </div>
+              <div class="list_icon flex items-center gap-1 pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-black">group Meettng</li>
+              </div>
+              <div class="list_icon flex items-center gap-1 pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-gray-500">Personal Meeting</li>
+              </div>
+              <div class="list_icon flex items-center gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-gray-500">Support 24 hours</li>
+              </div>
+              <div class="pt-5">
+                <button
+                  class="border-[1px] border-blue-500 outline-none py-2 px-8 rounded-full text-lg font-medium text-blue-500 hover:bg-blue-500 hover:text-white duration-200"
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pricing_cart bg-white shadow-md flex flex-col justify-center items-center py-16 rounded-lg lg:hover:-translate-y-5 relative duration-500 transition-all"
+          >
+            <h2 class="text-2xl font-semibold pb-5 tracking-wide text-black">
+              Light Session
+            </h2>
+            <p class="text-4xl font-extrabold text-blue-500 pb-10">$150</p>
+            <div class="list_items">
+              <div class="list_icon flex items-center gap-1 pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-black">6 session/month</li>
+              </div>
+              <div class="list_icon flex items-center gap-1 pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-black">Duration 30 minutes</li>
+              </div>
+              <div class="list_icon flex items-center gap-1 pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-black">group Meettng</li>
+              </div>
+              <div class="list_icon flex items-center gap-1 pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-gray-500">Personal Meeting</li>
+              </div>
+              <div class="list_icon flex items-center gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    style="fill: #f95d5ddd"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                  />
+                </svg>
+                <li class="text-gray-500">Support 24 hours</li>
+              </div>
+            </div>
+            <div class="pt-5">
+              <button
+                class="border-[1px] border-blue-500 outline-none py-2 px-8 rounded-full text-lg font-medium text-blue-500 hover:bg-blue-500 hover:text-white duration-200"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- services section -->
+
+    <!-- testimonial -->
+    <div
+      class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 lg:py-20 py-7"
+    >
+      <h2 class="text-3xl font-bold text-black tracking-wide text-center">
+        What Patients Say
+      </h2>
+      <p class="text-gray-500 text-center pt-2 pb-10 w-[350px] mx-auto">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+        accusantium.
+      </p>
+
+      <!-- swiper  -->
+      <div
+        class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-3 pt-16"
+      >
+        <!-- 1 -->
+        <div
+          class="images shadow-md shadow-blue-500 p-5 relative rounded-lg relative"
+        >
+          <img
+            src="./assets/doctor.jpg"
+            alt="doctor"
+            class="w-[100px] h-[100px] rounded-full absolute top-[-40px] left-1/2 -translate-x-1/2 shadow-md shadow-blue-500 ring-2 object-cover ring-blue-500"
+          />
+          <div class="mt-[60px] flex justify-center gap-1">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 448 512"
+                fill="#f95d5ddd"
+              >
+                <path
+                  d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
+                />
+              </svg>
+            </div>
+            <p class="text-gray-500 tracking-wide text-justify flex items-end">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni,
+              odio aliquam totam est praesentium excepturi? Itaque tempore
+              architecto voluptas corporis quibusdam et debitis, nam, dicta
+              dolore velit officia dolor incidunt.
+
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 448 512"
+                  fill="#f95d5ddd"
+                >
+                  <path
+                    d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
+                  />
+                </svg>
+              </span>
+            </p>
+          </div>
+
+          <h2
+            class="text_inside text-center text-lg mt-5 text-[#f95d5ddd] font-semibold"
+          >
+            Avinash Kr <small> Manager</small>
+          </h2>
+        </div>
+        <!-- 1 -->
+        <!-- 1 -->
+        <div
+          class="images shadow-md shadow-blue-500 p-5 relative rounded-lg relative"
+        >
+          <img
+            src="./assets/doctor.jpg"
+            alt="doctor"
+            class="w-[100px] h-[100px] rounded-full absolute top-[-40px] left-1/2 -translate-x-1/2 shadow-md shadow-blue-500 ring-2 object-cover ring-blue-500"
+          />
+          <div class="mt-[60px] flex justify-center gap-1">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 448 512"
+                fill="#f95d5ddd"
+              >
+                <path
+                  d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
+                />
+              </svg>
+            </div>
+            <p class="text-gray-500 tracking-wide text-justify flex items-end">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni,
+              odio aliquam totam est praesentium excepturi? Itaque tempore
+              architecto voluptas corporis quibusdam et debitis, nam, dicta
+              dolore velit officia dolor incidunt.
+
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 448 512"
+                  fill="#f95d5ddd"
+                >
+                  <path
+                    d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
+                  />
+                </svg>
+              </span>
+            </p>
+          </div>
+
+          <h2
+            class="text_inside text-center text-lg mt-5 text-[#f95d5ddd] font-semibold"
+          >
+            Avinash Kr <small> Manager</small>
+          </h2>
+        </div>
+        <!-- 1 -->
+        <!-- 1 -->
+        <div
+          class="images shadow-md shadow-blue-500 p-5 relative rounded-lg relative"
+        >
+          <img
+            src="./assets/doctor.jpg"
+            alt="doctor"
+            class="w-[100px] h-[100px] rounded-full absolute top-[-40px] left-1/2 -translate-x-1/2 shadow-md shadow-blue-500 ring-2 object-cover ring-blue-500"
+          />
+          <div class="mt-[60px] flex justify-center gap-1">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 448 512"
+                fill="#f95d5ddd"
+              >
+                <path
+                  d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
+                />
+              </svg>
+            </div>
+            <p class="text-gray-500 tracking-wide text-justify flex items-end">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni,
+              odio aliquam totam est praesentium excepturi? Itaque tempore
+              architecto voluptas corporis quibusdam et debitis, nam, dicta
+              dolore velit officia dolor incidunt.
+
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 448 512"
+                  fill="#f95d5ddd"
+                >
+                  <path
+                    d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
+                  />
+                </svg>
+              </span>
+            </p>
+          </div>
+
+          <h2
+            class="text_inside text-center text-lg mt-5 text-[#f95d5ddd] font-semibold"
+          >
+            Avinash Kr <small> Manager</small>
+          </h2>
+        </div>
+        <!-- 1 -->
+      </div>
+      <!-- swiper  -->
+    </div>
+    <!-- testimonial -->
+
+    <!-- Question -->
+    <div
+      class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 py-10 h-[700px]"
+    >
+      <div class="lg:flex items-center justify-between h-[500px]">
+        <div>
+          <div class="relative">
+            <div class="lg:w-1/2 w-full flex gap-5 relative">
+              <img
+                src="./assets/doctor.jpg"
+                alt="doctor _pic"
+                class="lg:w-[200px] lg:h-[200px] mx-auto object-cover rounded-tl-[80px] z-40 lg:block"
+              />
+              <img
+                src="./assets/doctor.jpg"
+                alt="doctor _pic"
+                class="lg:w-[200px] lg:h-[200px] object-cover relative -translate-y-[50px] rounded-tr-[70px] z-30 lg:block hidden"
+              />
+              <img
+                src="./assets/doctor.jpg"
+                alt="doctor _pic"
+                class="lg:w-[150px] lg:h-[150px] object-cover relative -translate-y-[50px] rounded-tr-[70px] left-[-180px] top-[210px] z-40 lg:block hidden"
+              />
+              <img
+                src="./assets/doctor.jpg"
+                alt="doctor _pic"
+                class="lg:w-[220px] lg:h-[250px] object-cover relative -translate-y-[50px] rounded-bl-[70px] left-[-590px] top-[270px] z-40 lg:block hidden"
+              />
+            </div>
+            <div
+              class="lg:w-[450px] lg:h-[400px] bg-blue-500 z-0 absolute top-0 -left-[16px] rounded-xl shadow shadow-white"
+            ></div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2 w-full">
+          <h2
+            class="text-3xl font-bold tracking-wide py-8 text-black text-center"
+          >
+            The Most Popular Questions to discuss Mental Health
+          </h2>
+          <!-- Accordion -->
+          <div class="collapse collapse-plus bg-white shadow mb-3">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title text-xl font-medium text-black">
+              Click to open this one and close others
+            </div>
+            <div class="collapse-content text-gray-500">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+                eaque itaque. Debitis natus id eum sint, itaque rerum iure quod
+                consequatur ratione veritatis ducimus, repellat reiciendis, iste
+                sapiente? Perferendis, facere.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-white shadow mb-3">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium text-black">
+              Click to open this one and close others
+            </div>
+            <div class="collapse-content text-gary-500">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                incidunt facilis nulla sapiente laboriosam? Nisi beatae,
+                necessitatibus, tempora ad velit eveniet nam fuga quo eaque
+                adipisci, modi eius ex dicta!
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-white shadow mb-3">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium text-black">
+              Click to open this one and close others
+            </div>
+            <div class="collapse-content text-gary-500">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Delectus unde voluptatibus numquam aliquam nostrum, earum
+                reiciendis voluptates cupiditate pariatur expedita dolores
+                officia atque placeat nisi. Itaque, tempora? Dolorum, expedita
+                ratione?
+              </p>
+            </div>
+          </div>
+          <!-- Accordion -->
+
+          <div class="w-full text-white"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Question -->
+    <!-- appointment -->
+    <div
+      id="appointment"
+      class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 lg:py-20 lg:pt-20 md:pt-[200px] pt-[300px]"
+    >
+      <h2 class="text-3xl font-bold text-center text-black">Appointment</h2>
+
+      <div class="pt-10">
+        <div id="evoCalendar"></div>
+      </div>
+    </div>
+    <!-- appointment -->
+
+    <!-- contact -->
+    <div
+      class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 pb-20 py-10"
+    >
+      <div class="lg:flex justify-between items-center gap-5">
+        <div class="contact_info">
+          <h2
+            class="text-3xl font-bold tracking-wide text-black lg:text-start text-center"
+          >
+            Contact Info
+          </h2>
+          <p class="text-gray-500 text-[15px] py-3 lg:text-start text-center">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            accusamus vitae deleniti ex omnis similique, possimus in unde
+            molestias non.
+          </p>
+          <div class="info pt-5">
+            <div class="flex justify-between w-full">
+              <div class="phone_icon flex gap-2 w-/2">
+                <div
+                  class="w-[30px] h-[30px] rounded-full bg-blue-500 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 512 512"
+                    fill="white"
+                  >
+                    <path
+                      d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-black">Phone Number</h3>
+                  <p class="text-black">+86998403460</p>
+                </div>
+              </div>
+              <div class="phone_icon flex gap-2 w-1/2">
+                <div
+                  class="w-[30px] h-[30px] rounded-full bg-blue-500 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 512 512"
+                    fill="white"
+                  >
+                    <path
+                      d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-black">Email</h3>
+                  <p class="text-black">www.email@gmal.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex pt-5 w-full">
+              <div class="phone_icon flex gap-2 w-1/2">
+                <div
+                  class="w-[30px] h-[30px] rounded-full bg-blue-500 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 512 512"
+                    fill="white"
+                  >
+                    <path
+                      d="M128 64v96h64V64H386.7L416 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L432 18.7C420 6.7 403.7 0 386.7 0H192c-35.3 0-64 28.7-64 64zM0 160V480c0 17.7 14.3 32 32 32H64c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32H32c-17.7 0-32 14.3-32 32zm480 32H128V480c0 17.7 14.3 32 32 32H480c17.7 0 32-14.3 32-32V224c0-17.7-14.3-32-32-32zM256 256a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm96 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32 96a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM224 416a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-black">Fax</h3>
+                  <p class="text-black">+86998460</p>
+                </div>
+              </div>
+              <div class="phone_icon flex gap-2 w-1/2">
+                <div
+                  class="w-[30px] h-[30px] rounded-full bg-blue-500 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 384 512"
+                    fill="white"
+                  >
+                    <path
+                      d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-black">Location</h3>
+                  <p class="text-black">43 street,Barishal</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map lg:mt-0 mt-9">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14722.723487171734!2d90.34659825!3d22.70292095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1695109825160!5m2!1sen!2sbd"
+            width="600"
+            height="450"
+            allowfullscreen=""
+            loading="lazy"
+            class="border-none outline-none rounded-tl-[50px] rounded-br-[50px] lg:w-[600px] w-full lg:h-[450px]"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- contact -->
+    <!-- footer -->
+    <div class="bg-slate-900">
+      <footer
+        class="lg:flex md:flex sm:flex flex-wrap flex justify-between lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 py-20"
+      >
+        <nav class="flex flex-col">
+          <header class="footer-title text-xl text-white">Services</header>
+          <a class="link link-hover text-gray-400">Branding</a>
+          <a class="link link-hover text-gray-400">Design</a>
+          <a class="link link-hover text-gray-400">Marketing</a>
+          <a class="link link-hover text-gray-400">Advertisement</a>
+        </nav>
+        <nav class="flex flex-col">
+          <header class="footer-title text-xl text-white">Company</header>
+          <a class="link link-hover text-gray-400">About us</a>
+          <a class="link link-hover text-gray-400">Contact</a>
+          <a class="link link-hover text-gray-400">Jobs</a>
+          <a class="link link-hover text-gray-400">Press kit</a>
+        </nav>
+        <nav class="flex flex-col">
+          <header class="footer-title text-xl text-white">Legal</header>
+          <a class="link link-hover text-gray-400">Terms of use</a>
+          <a class="link link-hover text-gray-400">Privacy policy</a>
+          <a class="link link-hover text-gray-400">Cookie policy</a>
+        </nav>
+      </footer>
+    </div>
+    <!-- footer -->
+    <!-- swiper js link -->
+
+    <script type="module">
+      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs";
+
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: false,
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+        },
+        // If we need pagination
+        // pagination: {
+        //   el: ".swiper-pagination",
+        // },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        //   el: ".swiper-scrollbar",
+        // },
+      });
+    </script>
+    <!-- from node_modules -->
+    <script src="node_modules/@material-tailwind/html/scripts/collapse.js"></script>
+
+    <!-- from cdn -->
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+
+    <!-- js link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/evo-calendar.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      $("#evoCalendar").evoCalendar({
+        format: "mm/dd/yyyy",
+        titleFormat: "MM yyyy",
+        eventHeaderFormat: "MM d, yyyy",
+      });
+    </script>
+    <!-- js link -->
+    <!-- swiper js link -->
+  </body>
+</html>

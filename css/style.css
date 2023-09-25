@@ -1,0 +1,195 @@
+/* font */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,600;1,700;1,800&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: white !important;
+  font-size: initial;
+  font-family: "Open Sans", sans-serif;
+}
+.gm-style .default-card {
+  padding: 5px 14px 5px 14px;
+  display: none;
+}
+/* .bg-color {
+    background: linear-gradient(90deg, #729199, #91ada6, #caf2ea);
+  } */
+.accordion {
+  background: rgb(34, 34, 34) !important;
+}
+
+.rdp-month.rdp-caption_start.rdp-caption_end {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+.rdp-table {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.rdp-weeknumber,
+.rdp-day {
+  display: block !important;
+}
+.rdp-button:not([disabled]) {
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+}
+.rdp-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+  margin: auto;
+  padding: 0 6px;
+}
+
+.react-responsive-modal-modal {
+  width: 500px;
+  border-radius: 20px;
+}
+@media screen and (max-width: 600px) {
+  .react-responsive-modal-modal {
+    max-width: 80%;
+    width: 80%;
+    border-radius: 20px;
+  }
+}
+
+#name::placeholder {
+  color: rgb(59, 59, 59);
+}
+#name {
+  width: 100%;
+  padding: 8px 8px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: #e8e8e8;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+}
+.input_filed > h2 {
+  margin-top: 50px;
+  color: rgb(220, 77, 77);
+}
+
+label {
+  margin-top: 7px;
+  display: inline-block;
+  padding-bottom: 10px;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.button {
+  width: 400px;
+  margin: 0 auto;
+  text-align: end;
+}
+.button > button {
+  margin-top: 20px;
+  width: 150px;
+  padding: 6px 20px;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+.w-\[100\%\].inline-block {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 5px 8px;
+  font-size: 18px;
+  background-color: #e8e8e8;
+  color: black;
+}
+
+.bg_nav_here {
+  background: #fff;
+}
+.bg-shadow_here {
+  background: linear-gradient(90deg, rgba(90, 90, 217, 0.352), blue);
+}
+
+.swiper {
+  width: 80%;
+  height: 300px;
+}
+@media screen and (max-width: 980px) {
+  .swiper {
+    width: 100%;
+  }
+}
+.swiper-button-prev {
+  display: none;
+}
+.swiper-button-next {
+  display: none;
+}
+.shadow_box {
+  border: 1px solid blue;
+}
+
+small {
+  color: #f95d5ddd;
+  font-size: 12px;
+  font-weight: 500;
+}
+/* .text_inside {
+  background: #f95d5d;
+  padding: 10px;
+  margin-top: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+} */
+
+.calendar-sidebar {
+  background: rgb(59, 130, 246);
+}
+
+#sidebarToggler {
+  background: rgb(59, 130, 246) !important;
+}
+.icon-button {
+  background: rgb(59, 130, 246) !important;
+}
+th {
+  color: rgb(59, 130, 246) !important;
+}
+.icon-button {
+  background: rgb(59, 130, 246) !important;
+}
+#eventListToggler {
+  background: rgb(59, 130, 246) !important;
+}
