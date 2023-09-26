@@ -37,6 +37,13 @@ body {
   padding: 5px 14px 5px 14px;
   display: none;
 }
+.bg_nav_here {
+  z-index: 999;
+}
+#mobile_device {
+  z-index: -2;
+}
+
 /* .bg-color {
     background: linear-gradient(90deg, #729199, #91ada6, #caf2ea);
   } */
@@ -167,61 +174,11 @@ small {
   font-size: 12px;
   font-weight: 500;
 }
-/* .text_inside {
-  background: #f95d5d;
-  padding: 10px;
-  margin-top: 30px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-} */
-.calendar-day > div {
-  color: white !important;
-}
 
 .calendar-sidebar {
   background: rgb(59, 130, 246);
 }
 
-#sidebarToggler {
-  background: rgb(59, 130, 246) !important;
-}
-.icon-button {
-  background: rgb(59, 130, 246) !important;
-}
-th {
-  color: rgb(59, 130, 246) !important;
-}
-.icon-button {
-  background: rgb(59, 130, 246) !important;
-}
-#eventListToggler {
-  background: rgb(59, 130, 246) !important;
-}
-
-tbody {
-  background: rgb(59, 130, 246) !important;
-}
-/*  */
-.calendar-inner {
-  background: rgb(59, 130, 246);
-}
-
-.calendar-events {
-  background: rgb(59, 130, 246);
-}
-tr > th {
-  color: white !important;
-}
-.calendar-header-day.--weekend,
-.calendar-header-day {
-  color: white !important;
-}
-.event-header > p {
-  color: white !important;
-}
-.calendar-year {
-  background: rgb(59, 130, 246) !important;
-}
 .icon-button {
   background: rgb(59, 130, 246) !important;
 }
@@ -235,4 +192,14 @@ tr > th {
 }
 #eventListToggler {
   background: rgb(59, 130, 246) !important;
+}
+.calendar-sidebar > .month-list > .calendar-months > li.active-month {
+  background-color: #639fdf !important;
+}
+tr.calendar-body .calendar-day .day.calendar-today:hover {
+  color: #fff;
+  background-color: #5eb5b1 !important;
+}
+.month:hover {
+  background-color: rgb(59, 150, 246) !important;
 }

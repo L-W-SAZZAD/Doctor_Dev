@@ -4,13 +4,13 @@ const closeBtn = document.querySelector("#closeBtn");
 
 const openClick = () => {
   console.log("click");
-  mobile_device.style.left = "0";
+  mobile_device.style.top = "83.2px";
   openBtn.style.display = "none";
   closeBtn.style.display = "block";
 };
 
 const closeClick = () => {
-  mobile_device.style.left = "-999px";
+  mobile_device.style.top = "-999px";
   openBtn.style.display = "block";
   closeBtn.style.display = "none";
 };
