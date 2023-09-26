@@ -31,6 +31,7 @@ body {
   background: white !important;
   font-size: initial;
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 .gm-style .default-card {
   padding: 5px 14px 5px 14px;
