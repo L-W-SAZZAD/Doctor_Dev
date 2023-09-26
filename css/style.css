@@ -41,7 +41,7 @@ body {
   z-index: 999;
 }
 #mobile_device {
-  z-index: -2;
+  z-index: -333;
 }
 
 /* .bg-color {
@@ -202,4 +202,16 @@ tr.calendar-body .calendar-day .day.calendar-today:hover {
 }
 .month:hover {
   background-color: rgb(59, 150, 246) !important;
+}
+.calendar-year {
+  background: rgb(59, 130, 246) !important;
+}
+.icon-button {
+  background: rgb(59, 130, 246) !important;
+}
+#eventListToggler {
+  background: rgb(59, 130, 246) !important;
+}
+#sidebarToggler {
+  background: rgb(59, 130, 246) !important;
 }
