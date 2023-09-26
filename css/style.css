@@ -173,6 +173,9 @@ small {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 } */
+.calendar-day > div {
+  color: white !important;
+}
 
 .calendar-sidebar {
   background: rgb(59, 130, 246);
@@ -188,6 +191,45 @@ th {
   color: rgb(59, 130, 246) !important;
 }
 .icon-button {
+  background: rgb(59, 130, 246) !important;
+}
+#eventListToggler {
+  background: rgb(59, 130, 246) !important;
+}
+
+tbody {
+  background: rgb(59, 130, 246) !important;
+}
+/*  */
+.calendar-inner {
+  background: rgb(59, 130, 246);
+}
+
+.calendar-events {
+  background: rgb(59, 130, 246);
+}
+tr > th {
+  color: white !important;
+}
+.calendar-header-day.--weekend,
+.calendar-header-day {
+  color: white !important;
+}
+.event-header > p {
+  color: white !important;
+}
+.calendar-year {
+  background: rgb(59, 130, 246) !important;
+}
+.icon-button {
+  background: rgb(59, 130, 246) !important;
+}
+
+#sidebarToggler {
+  background: rgb(59, 130, 246) !important;
+}
+
+.month-list {
   background: rgb(59, 130, 246) !important;
 }
 #eventListToggler {

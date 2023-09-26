@@ -44,7 +44,7 @@
   <body>
     <!-- navbar  -->
     <div
-      class="bg_nav_here fixed z-50 w-full top-0 left-0 border-b-[1px] shadow bg-slate-900"
+      class="bg_nav_here fixed z-50 w-full top-0 left-0 border-b-[1px] shadow bg-gray-700"
     >
       <div class="nav_container lg:w-[1120px] lg:mx-auto w-full lg:px-0 px-3">
         <div
@@ -147,8 +147,12 @@
     <div
       class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 pt-[150px]"
     >
-      <div class="flex justify-between items-center gap-5">
-        <div class="head_right lg:w-1/2 w-full">
+      <div
+        class="lg:flex md:flex lg:flex-row md:flex-row flex flex-col justify-between items-center gap-5"
+      >
+        <div
+          class="head_right lg:w-1/2 w-full lg:order-first md:order-first order-last lg:mt-0 md:mt-0 mt-4"
+        >
           <h2
             class="text-4xl text-blue-500 font-bold pb-2 lg:text-start text-center"
           >
@@ -243,7 +247,7 @@
           </div>
         </div>
         <div
-          class="head_left lg:w-1/2 relative lg:flex flex-col justify-center items-center hidden"
+          class="head_left lg:w-1/2 relative lg:flex flex-col justify-center items-center lg:mt-0 md:mt-0 mt-10 order-first"
         >
           <img
             src="./assets/doctor.jpg"
@@ -594,7 +598,7 @@
         <!-- 1 -->
         <!-- 1 -->
         <div
-          class="images shadow-md shadow-blue-500 p-5 relative rounded-lg relative"
+          class="images shadow-md shadow-blue-500 p-5 relative rounded-lg relative lg:mt-0 md:mt-0 mt-16"
         >
           <img
             src="./assets/doctor.jpg"
@@ -644,7 +648,7 @@
         <!-- 1 -->
         <!-- 1 -->
         <div
-          class="images shadow-md shadow-blue-500 p-5 relative rounded-lg relative"
+          class="images shadow-md shadow-blue-500 p-5 relative rounded-lg relative lg:mt-0 md:mt-0 mt-16"
         >
           <img
             src="./assets/doctor.jpg"
@@ -792,7 +796,7 @@
     <!-- appointment -->
     <div
       id="appointment"
-      class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 lg:py-20 lg:pt-20 md:pt-[200px] pt-[300px]"
+      class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 lg:py-20 lg:pt-20 md:pt-[200px] sm:pt-[150px] pt-[230px]"
     >
       <h2 class="text-3xl font-bold text-center text-black">Appointment</h2>
 
@@ -921,7 +925,7 @@
     </div>
     <!-- contact -->
     <!-- footer -->
-    <div class="bg-slate-900">
+    <div class="bg-gray-800">
       <footer
         class="lg:flex md:flex sm:flex flex-wrap flex justify-between lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 py-20"
       >
