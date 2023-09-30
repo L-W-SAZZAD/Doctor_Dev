@@ -26,14 +26,6 @@
       crossorigin="anonymous"
     ></script>
     <!-- font link -->
-    <!-- swiper js link  -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
-    <!-- swiper js link  -->
-    <link rel="stylesheet" href="css/evo-calendar.css" />
-    <link rel="stylesheet" href="css/evo-calendar.midnight-blue.css" />
 
     <!-- css link here -->
     <link rel="stylesheet" href="css/style.css" />
@@ -91,7 +83,7 @@
                 </li>
               </a>
 
-              <a href="#appointment">
+              <a href="appointment.html">
                 <li
                   class="text-black text-lg font-bold tracking-wide px-3 py-1 rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white bg-blue-500"
                 >
@@ -103,6 +95,13 @@
                   class="text-black text-lg font-bold tracking-wide px-3 py-1 rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white"
                 >
                   Contact
+                </li>
+              </a>
+              <a href="course.html">
+                <li
+                  class="text-black text-lg font-bold tracking-wide px-3 py-1 rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white"
+                >
+                  Our Course
                 </li>
               </a>
             </ul>
@@ -149,7 +148,7 @@
     </div>
     <!-- navbar  -->
 
-    <!--    Hero Section  -->
+    <!-- Hero Section  -->
     <div
       class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 pt-[150px]"
     >
@@ -243,7 +242,7 @@
             </div>
           </div>
           <div class="mt-5 lg:text-start text-center">
-            <a href="#appointment">
+            <a href="appointment.html">
               <button
                 class="bg-[#f95d5ddd] px-5 py-2 text-lg rounded-lg hover:bg-blue-500 hover:text-[#fff] duration-500 text-white font-bold"
               >
@@ -266,7 +265,7 @@
         </div>
       </div>
     </div>
-    <!--    Hero Section  -->
+    <!-- Hero Section  -->
 
     <!-- services section -->
     <div id="services" class="bg-color">
@@ -797,8 +796,9 @@
       </div>
     </div>
     <!-- Question -->
+
     <!-- appointment -->
-    <div
+    <!-- <div
       id="appointment"
       class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 lg:py-20 lg:mt-0 md:mt-[200px] sm:mt-[200px] mt-[250px]"
     >
@@ -807,16 +807,16 @@
       <div class="pt-10">
         <div id="evoCalendar"></div>
       </div>
-    </div>
+    </div> -->
     <!-- appointment -->
 
     <!-- contact -->
     <div
       id="contact"
-      class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 pb-20 py-10"
+      class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 pb-20 py-10 lg:mt-0 md:mt-[200px] sm:mt-[200px] mt-[250px]"
     >
-      <div class="lg:flex justify-between items-center gap-5">
-        <div class="contact_info">
+      <div class="lg:flex md:flex justify-between gap-10">
+        <div class="contact_info lg:w-[60%] md:w-[60%]">
           <h2
             class="text-3xl font-bold tracking-wide text-black lg:text-start text-center"
           >
@@ -926,8 +926,8 @@
             <!-- location -->
           </div>
         </div>
-        <div class="map lg:mt-0 mt-9">
-          <iframe
+        <div class="map lg:w-[40%] md:w-[40%] lg:mt-0 mt-9">
+          <!-- <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14722.723487171734!2d90.34659825!3d22.70292095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1695109825160!5m2!1sen!2sbd"
             width="600"
             height="450"
@@ -935,11 +935,51 @@
             loading="lazy"
             class="border-none outline-none rounded-tl-[50px] rounded-br-[50px] lg:w-[600px] w-full lg:h-[450px]"
             referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          ></iframe> -->
+          <!-- input filed -->
+          <div class="input_filed w-full">
+            <div class="w-full">
+              <input
+                type="text"
+                name="name"
+                id=""
+                class="w-full bg-white py-2 px-2 shadow-md text-lg font-medium rounded-md text-black"
+                placeholder=" Your Name"
+              />
+            </div>
+            <div class="w-full mt-3">
+              <input
+                type="text"
+                name="phoneNumber"
+                id=""
+                class="w-full bg-white py-2 px-2 shadow-md text-lg font-medium rounded-md text-black"
+                placeholder=" Your Phone Number"
+              />
+            </div>
+            <div class="w-full">
+              <textarea
+                class="w-full mt-3 block bg-white shadow-md rounded-md px-2 py-2 text-lg font-medium text-black"
+                placeholder=" Your Message"
+                name="m"
+                id=""
+                cols="3"
+                rows="3"
+              ></textarea>
+            </div>
+            <div class="text-end">
+              <button
+                class="py-2 px-5 bg-blue-500 rounded-md mt-5 font-bold text-white text-lg"
+              >
+                Send Message
+              </button>
+            </div>
+          </div>
+          <!-- input filed -->
         </div>
       </div>
     </div>
     <!-- contact -->
+
     <!-- footer -->
     <div class="bg-gray-800">
       <footer
@@ -968,6 +1008,7 @@
       </footer>
     </div>
     <!-- footer -->
+
     <!-- swiper js link -->
 
     <script type="module">
@@ -1018,16 +1059,7 @@
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
 
     <!-- js link -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/evo-calendar.js"></script>
     <script src="js/script.js"></script>
-    <script>
-      $("#evoCalendar").evoCalendar({
-        format: "mm/dd/yyyy",
-        titleFormat: "MM yyyy",
-        eventHeaderFormat: "MM d, yyyy",
-      });
-    </script>
     <!-- js link -->
     <!-- swiper js link -->
   </body>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment</title>
+    <!-- tailwind cdn link -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- font link -->
+    <script
+      src="https://kit.fontawesome.com/1deda58036.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font link -->
+    <!-- swiper js link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- swiper js link  -->
+    <link rel="stylesheet" href="css/evo-calendar.css" />
+    <link rel="stylesheet" href="css/evo-calendar.midnight-blue.css" />
+
+    <!-- css link here -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- css link here -->
+    <!-- tailwind cdn link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- heading -->
+    <div class="our_coursesAppoint">
+      <h1
+        class="text-center lg:text-5xl md:text-4xl text-2xl text-blue-500 font-bold relative z-40"
+      >
+        Appointment
+      </h1>
+      <div class="absolute z-50 bottom-0 left-1/2 -translate-x-1/2 w-[100%]">
+        <div class="w-[90%] mx-auto">
+          <button
+            class="bg-blue-500 inline-block py-2 rounded-tl-[25px] rounded-tr-[25px] text-lg font-bold text-white w-full"
+          >
+            <a href="index.html"> Home </a>|<a href="appointment.html">
+              appointment</a
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- heading -->
+    <!-- <div
+      class="py-10 lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2"
+    >
+      <h2 class="text-3xl font-bold text-black uppercase">Appointment</h2>
+      <div
+        class="lg:w-[20%] md:w-[20%] sm:w-[55%] w-[65%] h-[5px] bg-blue-500 mt-1 rounded-md"
+      ></div>
+    </div> -->
+    <!-- appointment -->
+    <div
+      id="appointment"
+      class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 py-10 pb-10"
+    >
+      <div
+        class="pt-10 lg:flex lg:flex-row md:flex md:flex-row flex flex-col gap-4"
+      >
+        <!-- left -->
+        <div
+          class="left lg:w-1/2 lg:order-first md:order-first sm:order-last order-last lg:pt-0 md:pt-0 pt-10 shadow-md rounded-md"
+        >
+          <div class="calendar">
+            <div class="calendar-header rounded-tl-[10px] rounded-tr-[10px]">
+              <button
+                id="prevMonth"
+                class="shadow-md py-2 px-4 font-bold bg-blue-600 rounded-md"
+              >
+                Previous
+              </button>
+              <h1 id="currentMonth">Month Year</h1>
+              <button
+                id="nextMonth"
+                class="shadow-md py-2 px-4 font-bold bg-blue-600 rounded-md"
+              >
+                Next
+              </button>
+            </div>
+            <div class="calendar-body" id="calendarBody">
+              <!-- Calendar Days will be added here using JavaScript -->
+            </div>
+          </div>
+        </div>
+        <!-- right -->
+        <div id="date_here" class="right lg:w-1/2 shadow-md rounded-md py-5">
+          <p
+            id="text_append"
+            class="text-center text-2xl font-bold text-blue-500"
+          >
+            Date
+          </p>
+
+          <div
+            class="appoint_slot px-3 w-full grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 pt-5"
+          >
+            <!-- slots -->
+            <button class="shadow-md py-2 px-5 rounded-md">12/04/2023</button>
+            <button class="shadow-md py-2 px-5 rounded-md">12/04/2023</button>
+            <button class="shadow-md py-2 px-5 rounded-md">12/04/2023</button>
+            <button class="shadow-md py-2 px-5 rounded-md">12/04/2023</button>
+            <button class="shadow-md py-2 px-5 rounded-md">12/04/2023</button>
+            <button class="shadow-md py-2 px-5 rounded-md">12/04/2023</button>
+            <button class="shadow-md py-2 px-5 rounded-md">12/04/2023</button>
+            <button class="shadow-md py-2 px-5 rounded-md">12/04/2023</button>
+            <button class="shadow-md py-2 px-5 rounded-md">12/04/2023</button>
+            <button class="shadow-md py-2 px-5 rounded-md">12/04/2023</button>
+            <!-- slots -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- appointment -->
+
+    <script src="js/appointment.js"></script>
+
+    <!-- js link -->
+  </body>
+</html>
