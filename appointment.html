@@ -71,7 +71,6 @@
     </div> -->
     <!-- appointment -->
     <div
-      id="appointment"
       class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 py-10 pb-10"
     >
       <div
@@ -79,9 +78,10 @@
       >
         <!-- left -->
         <div
-          class="left lg:w-1/2 lg:order-first md:order-first sm:order-last order-last lg:pt-0 md:pt-0 pt-10 shadow-md rounded-md"
+          id="calender_all"
+          class="left lg:w-[50%] md:w-[50%] w-full lg:order-first md:order-first sm:order-last order-last lg:pt-0 md:pt-0 pt-10 shadow-md rounded-md mx-auto"
         >
-          <div class="calendar">
+          <div class="calendar lg:block">
             <div class="calendar-header rounded-tl-[10px] rounded-tr-[10px]">
               <button
                 id="prevMonth"
@@ -103,7 +103,23 @@
           </div>
         </div>
         <!-- right -->
-        <div id="date_here" class="right lg:w-1/2 shadow-md rounded-md py-5">
+        <div
+          id="date_here"
+          class="right lg:w-[50%] md:[50%] w-full shadow-md rounded-md py-5 hidden relative mx-auto"
+        >
+          <button id="back_id" class="absolute top-0 right-0">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="2em"
+              viewBox="0 0 512 512"
+              fill="#007bff"
+            >
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
+              />
+            </svg>
+          </button>
           <p
             id="text_append"
             class="text-center text-2xl font-bold text-blue-500"
@@ -115,7 +131,9 @@
             class="appoint_slot px-3 w-full grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 pt-5"
           >
             <!-- slots -->
-            <button class="shadow-md py-2 px-5 rounded-md">09:00 AM</button>
+            <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
+              09:00 AM
+            </button>
             <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
               09:15 AM
             </button>

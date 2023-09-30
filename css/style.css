@@ -32,13 +32,14 @@ a {
   list-style: none;
 }
 body {
-  background: white !important;
   font-size: initial;
+  background-color: #fff;
   font-family: "Open Sans", sans-serif, "Roboto", sans-serif, "Lato", sans-serif;
   letter-spacing: 0.025em;
   text-decoration: none !important;
   overflow-x: hidden;
 }
+
 button {
   text-decoration: none !important;
 }

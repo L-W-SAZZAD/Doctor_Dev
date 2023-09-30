@@ -2,6 +2,9 @@ const calendarBody = document.getElementById("calendarBody");
 const currentMonthElement = document.getElementById("currentMonth");
 const prevMonthButton = document.getElementById("prevMonth");
 const nextMonthButton = document.getElementById("nextMonth");
+const calender_all = document.getElementById("calender_all");
+const date_here_right = document.getElementById("date_here");
+const back_id = document.getElementById("back_id");
 
 const today = new Date();
 let currentMonth = today.getMonth();
@@ -25,6 +28,7 @@ function updateCalendar() {
   }
 
   for (let i = 1; i <= daysInMonth; i++) {
+    console.log(i);
     const dayElement = document.createElement("div");
 
     dayElement.className = "day";
@@ -39,6 +43,14 @@ function updateCalendar() {
 
       //   current Date Here
       text_append.textContent = ` ${i}/${currentMonth + 1}/${currentYear}`;
+
+      if (window.innerWidth > 780) {
+        calender_all.style.display = "block";
+        date_here.style.display = "block";
+      } else {
+        calender_all.style.display = "none";
+        date_here.style.display = "block";
+      }
 
       // Get the container element where you want to append the <p> element
 
@@ -83,3 +95,8 @@ nextMonthButton.addEventListener("click", () => {
 });
 
 updateCalendar();
+
+back_id.addEventListener("click", () => {
+  calender_all.style.display = "block";
+  date_here.style.display = "none";
+});
