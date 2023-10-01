@@ -363,15 +363,7 @@ button {
 .active:active {
   background: rgb(25, 25, 25);
 }
-/* .day {
-  color: #242323 !important;
-}
-.day:active {
-  color: #ffffff !important;
-}
-.day:ac {
-  color: #ffffff !important;
-} */
+
 .day {
   box-shadow: 1px 1px 1px #f0f0f0 !important;
   border-radius: 5px;

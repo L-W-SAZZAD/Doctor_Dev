@@ -26,6 +26,9 @@
       crossorigin="anonymous"
     ></script>
     <!-- font link -->
+    <!-- aos link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- aos link -->
 
     <!-- css link here -->
     <link rel="stylesheet" href="css/swiper.css" />
@@ -37,7 +40,10 @@
   <body>
     <!-- navbar  -->
 
-    <div class="bg_nav_here fixed w-full top-0 left-0 shadow bg-[#223a66bb]">
+    <div
+      data-aos="fade-down"
+      class="bg_nav_here fixed w-full top-0 left-0 shadow bg-[#223a66bb]"
+    >
       <div class="nav_container lg:w-[1120px] lg:mx-auto w-full lg:px-0 px-3">
         <div
           class="nav_wrapper lg:flex md:flex flex lg:justify-between lg:items-center md:justify-between md:items-center py-2 justify-between items-center"
@@ -156,6 +162,7 @@
         class="lg:flex md:flex lg:flex-row md:flex-row flex flex-col justify-between items-center gap-5"
       >
         <div
+          data-aos="zoom-in-right"
           class="head_right lg:w-1/2 w-full lg:order-first md:order-first order-last lg:mt-0 md:mt-0 mt-4"
         >
           <h1
@@ -275,6 +282,7 @@
           </div>
         </div>
         <div
+          data-aos="zoom-in-left"
           class="head_left lg:w-1/2 relative lg:flex flex-col justify-center items-center lg:mt-0 md:mt-0 mt-10 order-first"
         >
           <img
@@ -310,7 +318,12 @@
           voluptates incidunt molestias nostrum laudantium. Maiores porro cumque
           quaerat.
         </p>
-        <div class="pricing_wrapper grid lg:grid-cols-3 md:grid-cols-3 gap-8">
+        <div
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+          class="pricing_wrapper grid lg:grid-cols-3 md:grid-cols-3 gap-8"
+        >
           <!-- single -->
           <div class="pricing_cart bg-white shadow-md py-12 px-7 rounded-md">
             <div class="flex items-center gap-7">
@@ -467,10 +480,6 @@
 
     <!-- services section -->
 
-    <!-- swiper -->
-
-    <!-- swiper -->
-
     <!-- testimonial -->
 
     <div
@@ -491,7 +500,11 @@
 
       <!-- swiper  -->
       <!-- swiper -->
-      <div class="lg:w-[1120px] lg:mx-auto">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        class="lg:w-[1120px] lg:mx-auto"
+      >
         <swiper-container
           style="
             --swiper-navigation-color: #0e0d0d;
@@ -796,7 +809,12 @@
         class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 py-10 h-[700px]"
       >
         <div class="lg:flex md:flex items-center justify-between h-[500px]">
-          <div class="">
+          <div
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            class=""
+          >
             <div class="relative">
               <div class="lg:w-1/2 md:1/2 w-full flex gap-5 relative">
                 <img
@@ -826,7 +844,12 @@
             </div>
           </div>
 
-          <div class="lg:w-1/2 md:1/2 w-full">
+          <div
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            class="lg:w-1/2 md:1/2 w-full"
+          >
             <h2
               class="text-center lg:text-3xl md:text-3xl text-xl lg:pt-0 md:pt-0 pt-7 tracking-wide font-bold text-[#223a66bb] pb-7"
             >
@@ -885,19 +908,6 @@
     </div>
     <!-- Question -->
 
-    <!-- appointment -->
-    <!-- <div
-      id="appointment"
-      class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 lg:py-20 lg:mt-0 md:mt-[200px] sm:mt-[200px] mt-[250px]"
-    >
-      <h2 class="text-3xl font-bold text-center text-black">Appointment</h2>
-
-      <div class="pt-10">
-        <div id="evoCalendar"></div>
-      </div>
-    </div> -->
-    <!-- appointment -->
-
     <!-- contact -->
     <div
       id="contact"
@@ -934,6 +944,7 @@
 
         <!-- left -->
         <div
+          data-aos="zoom-out-down"
           class="contact_info lg:w-[50%] md:w-[50%] lg:pl-10 lg:pt-0 md:pt-0 pt-8 lg:text-start md:text-start text-center"
         >
           <h2
@@ -1096,6 +1107,12 @@
       swiperEl.initialize();
     </script>
     <!-- js link -->
+    <!-- aos js link -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- aos js link -->
     <!-- swiper js link -->
   </body>
 </html>

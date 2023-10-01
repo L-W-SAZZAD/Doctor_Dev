@@ -34,6 +34,9 @@
     <link rel="stylesheet" href="css/evo-calendar.css" />
     <link rel="stylesheet" href="css/evo-calendar.midnight-blue.css" />
 
+    <!-- aos link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- aos link -->
     <!-- css link here -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- css link here -->
@@ -198,6 +201,9 @@
         >
           <!-- left -->
           <div
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
             id="calender_all"
             class="left lg:w-[50%] md:w-[50%] w-full lg:order-first md:order-first sm:order-last order-last lg:pt-0 md:pt-0 pt-10 shadow-md rounded-md mx-auto"
           >
@@ -293,5 +299,11 @@
     <script src="js/script.js"></script>
 
     <!-- js link -->
+    <!-- aos js link -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- aos js link -->
   </body>
 </html>
