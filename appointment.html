@@ -41,19 +41,138 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <!-- navbar  -->
+
+    <div class="bg_nav_here fixed w-full top-0 left-0 shadow bg-[#223a66bb]">
+      <div class="nav_container lg:w-[1120px] lg:mx-auto w-full lg:px-0 px-3">
+        <div
+          class="nav_wrapper lg:flex md:flex flex lg:justify-between lg:items-center md:justify-between md:items-center py-2 justify-between items-center"
+        >
+          <!-- {/*--------------- nav_logo------------ */} -->
+
+          <div class="nav_logo">
+            <h2 class="text-black text-lg font-medium">
+              <a href="index.html">
+                <div
+                  class="w-[50px] h-[50px] rounded-full bg-white flex justify-center items-center relative z-50"
+                >
+                  <img
+                    class="w-[40px] h-[40px]"
+                    src="./assets/doctor_profile.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </h2>
+          </div>
+
+          <!-- {/* ---------------nav_logo------------ */} -->
+          <!-- {/*--------------- menu items----------- */} -->
+          <div class="index_value">
+            <ul
+              id="mobile_device"
+              class="lg:flex gap-5 lg:static lg:bg-inherit absolute top-[-999px] left-[0px] lg:w-static w-[100%] bg-gray-700 lg:shadow-none shadow-md duration-500"
+            >
+              <a href="index.html">
+                <li
+                  class="index_menu text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200"
+                >
+                  Home
+                </li>
+              </a>
+
+              <a href="index.html#services">
+                <li
+                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200 index_menu"
+                >
+                  Services
+                </li>
+              </a>
+
+              <a href="appointment.html">
+                <li
+                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200 index_menu"
+                >
+                  Appointment
+                </li>
+              </a>
+              <a href="index.html#contact">
+                <li
+                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200 index_menu"
+                >
+                  Contact
+                </li>
+              </a>
+              <a href="course.html">
+                <li
+                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200 index_menu"
+                >
+                  Our Course
+                </li>
+              </a>
+            </ul>
+          </div>
+          <!-- {/*-------------- menu items------------ */} -->
+          <!-- {/* mobile menu */} -->
+          <div class="lg:hidden cursor-pointer z-50 relative">
+            <div
+              id="openBtn"
+              onclick="openClick()"
+              class="lg:hidden block z-50 relative"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="2em"
+                viewBox="0 0 448 512"
+                fill="white"
+              >
+                <path
+                  d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                />
+              </svg>
+            </div>
+            <div
+              class="hidden cursor-pointer z-50 relative"
+              id="closeBtn"
+              onclick="closeClick()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="2em"
+                viewBox="0 0 384 512"
+                fill="red"
+              >
+                <path
+                  d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- {/* mobile menu */} -->
+        </div>
+      </div>
+    </div>
+    <!-- navbar  -->
+
     <!-- heading -->
-    <div class="our_coursesAppoint">
-      <h1
-        class="text-center lg:text-5xl md:text-4xl text-2xl text-blue-500 font-bold relative z-40"
-      >
-        Appointment
-      </h1>
-      <div class="absolute z-50 bottom-0 left-1/2 -translate-x-1/2 w-[100%]">
-        <div class="w-[90%] mx-auto">
-          <button
-            class="bg-blue-500 inline-block py-2 rounded-tl-[25px] rounded-tr-[25px] text-lg font-bold text-white w-full"
-          >
-            <a href="index.html"> Home </a>|<a href="appointment.html">
+    <div class="pt-[65px]">
+      <div class="our_coursesAppoint">
+        <h1
+          class="text-center lg:text-6xl md:text-4xl text-2xl text-[#fff] font-bold relative z-40"
+        >
+          Appointment
+        </h1>
+        <div class="pt-5">
+          <button class="flex gap-3 text-white relative z-50">
+            <a
+              href="index.html"
+              class="text-white hover:text-[#e12454] hover:duration-200"
+            >
+              Home </a
+            >|<a
+              href="appointment.html"
+              class="text-white hover:text-[#e12454] hover:duration-200"
+            >
               appointment</a
             >
           </button>
@@ -70,98 +189,100 @@
       ></div>
     </div> -->
     <!-- appointment -->
-    <div
-      class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 py-10 pb-10"
-    >
+    <div class="bg-[#f4f9fc]">
       <div
-        class="pt-10 lg:flex lg:flex-row md:flex md:flex-row flex flex-col gap-4"
+        class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 py-10 pb-10"
       >
-        <!-- left -->
         <div
-          id="calender_all"
-          class="left lg:w-[50%] md:w-[50%] w-full lg:order-first md:order-first sm:order-last order-last lg:pt-0 md:pt-0 pt-10 shadow-md rounded-md mx-auto"
+          class="pt-10 lg:flex lg:flex-row md:flex md:flex-row flex flex-col gap-4"
         >
-          <div class="calendar lg:block">
-            <div class="calendar-header rounded-tl-[10px] rounded-tr-[10px]">
-              <button
-                id="prevMonth"
-                class="shadow-md py-2 px-4 font-bold bg-blue-600 rounded-md"
-              >
-                Previous
-              </button>
-              <h1 id="currentMonth">Month Year</h1>
-              <button
-                id="nextMonth"
-                class="shadow-md py-2 px-4 font-bold bg-blue-600 rounded-md"
-              >
-                Next
-              </button>
-            </div>
-            <div class="calendar-body" id="calendarBody">
-              <!-- Calendar Days will be added here using JavaScript -->
+          <!-- left -->
+          <div
+            id="calender_all"
+            class="left lg:w-[50%] md:w-[50%] w-full lg:order-first md:order-first sm:order-last order-last lg:pt-0 md:pt-0 pt-10 shadow-md rounded-md mx-auto"
+          >
+            <div class="calendar lg:block">
+              <div class="calendar-header rounded-tl-[10px] rounded-tr-[10px]">
+                <button
+                  id="prevMonth"
+                  class="shadow-md py-2 px-4 font-bold bg-blue-600 rounded-md"
+                >
+                  Previous
+                </button>
+                <h1 id="currentMonth">Month Year</h1>
+                <button
+                  id="nextMonth"
+                  class="shadow-md py-2 px-4 font-bold bg-blue-600 rounded-md"
+                >
+                  Next
+                </button>
+              </div>
+              <div class="calendar-body" id="calendarBody">
+                <!-- Calendar Days will be added here using JavaScript -->
+              </div>
             </div>
           </div>
-        </div>
-        <!-- right -->
-        <div
-          id="date_here"
-          class="right lg:w-[50%] md:[50%] w-full shadow-md rounded-md py-5 hidden relative mx-auto"
-        >
-          <button id="back_id" class="absolute top-0 right-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="2em"
-              viewBox="0 0 512 512"
-              fill="#007bff"
-            >
-              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path
-                d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
-              />
-            </svg>
-          </button>
-          <p
-            id="text_append"
-            class="text-center text-2xl font-bold text-blue-500"
-          >
-            Date
-          </p>
-
+          <!-- right -->
           <div
-            class="appoint_slot px-3 w-full grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 pt-5"
+            id="date_here"
+            class="right lg:w-[50%] md:[50%] w-full shadow-md rounded-md py-5 hidden relative mx-auto"
           >
-            <!-- slots -->
-            <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
-              09:00 AM
+            <button id="back_id" class="absolute top-0 right-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="2em"
+                viewBox="0 0 512 512"
+                fill="#223a66"
+              >
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
+                />
+              </svg>
             </button>
-            <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
-              09:15 AM
-            </button>
-            <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
-              09:30 AM
-            </button>
-            <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
-              09:45 AM
-            </button>
-            <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
-              10:00 AM
-            </button>
-            <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
-              10:15 AM
-            </button>
-            <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
-              10:30 AM
-            </button>
-            <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
-              10:45 AM
-            </button>
-            <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
-              11:00 AM
-            </button>
-            <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
-              11:15 AM
-            </button>
-            <!-- slots -->
+            <p
+              id="text_append"
+              class="text-center text-2xl font-bold text-[#223a66]"
+            >
+              Date
+            </p>
+
+            <div
+              class="appoint_slot px-3 w-full grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 pt-5"
+            >
+              <!-- slots -->
+              <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
+                09:00 AM
+              </button>
+              <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
+                09:15 AM
+              </button>
+              <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
+                09:30 AM
+              </button>
+              <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
+                09:45 AM
+              </button>
+              <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
+                10:00 AM
+              </button>
+              <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
+                10:15 AM
+              </button>
+              <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
+                10:30 AM
+              </button>
+              <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
+                10:45 AM
+              </button>
+              <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
+                11:00 AM
+              </button>
+              <button class="shadow-md py-2 px-5 rounded-md text-gray-400">
+                11:15 AM
+              </button>
+              <!-- slots -->
+            </div>
           </div>
         </div>
       </div>
@@ -169,6 +290,7 @@
     <!-- appointment -->
 
     <script src="js/appointment.js"></script>
+    <script src="js/script.js"></script>
 
     <!-- js link -->
   </body>

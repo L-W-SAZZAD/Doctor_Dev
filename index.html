@@ -28,6 +28,7 @@
     <!-- font link -->
 
     <!-- css link here -->
+    <link rel="stylesheet" href="css/swiper.css" />
     <link rel="stylesheet" href="css/style.css" />
     <!-- css link here -->
     <!-- tailwind cdn link -->
@@ -36,9 +37,7 @@
   <body>
     <!-- navbar  -->
 
-    <div
-      class="bg_nav_here fixed w-full top-0 left-0 border-b-[1px] shadow bg-[#223a66bb]"
-    >
+    <div class="bg_nav_here fixed w-full top-0 left-0 shadow bg-[#223a66bb]">
       <div class="nav_container lg:w-[1120px] lg:mx-auto w-full lg:px-0 px-3">
         <div
           class="nav_wrapper lg:flex md:flex flex lg:justify-between lg:items-center md:justify-between md:items-center py-2 justify-between items-center"
@@ -47,7 +46,7 @@
 
           <div class="nav_logo">
             <h2 class="text-black text-lg font-medium">
-              <a href="#">
+              <a href="index.html">
                 <div
                   class="w-[50px] h-[50px] rounded-full bg-white flex justify-center items-center relative z-50"
                 >
@@ -68,17 +67,17 @@
               id="mobile_device"
               class="lg:flex gap-5 lg:static lg:bg-inherit absolute top-[-999px] left-[0px] lg:w-static w-[100%] bg-gray-700 lg:shadow-none shadow-md duration-500"
             >
-              <a href="#">
+              <a href="index.html">
                 <li
-                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white hover:text-blue-500 duration-200"
+                  class="index_menu text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200"
                 >
                   Home
                 </li>
               </a>
 
-              <a href="#services">
+              <a href="index.html#services">
                 <li
-                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white hover:text-blue-500 duration-200"
+                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200 index_menu"
                 >
                   Services
                 </li>
@@ -86,21 +85,21 @@
 
               <a href="appointment.html">
                 <li
-                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white hover:text-blue-500 duration-200"
+                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200 index_menu"
                 >
                   Appointment
                 </li>
               </a>
-              <a href="#contact">
+              <a href="index.html#contact">
                 <li
-                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white hover:text-blue-500 duration-200"
+                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200 index_menu"
                 >
                   Contact
                 </li>
               </a>
               <a href="course.html">
                 <li
-                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white hover:text-blue-500 duration-200"
+                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200 index_menu"
                 >
                   Our Course
                 </li>
@@ -119,7 +118,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 height="2em"
                 viewBox="0 0 448 512"
-                fill="blue"
+                fill="white"
               >
                 <path
                   d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
@@ -172,9 +171,11 @@
           </p>
 
           <!-- slots -->
-          <div class="lg:w-[500px] md:w-[500px] w-full">
-            <div class="flex justify-content-start gap-5">
-              <div class="flex align-items-center gap-2 w-1/2">
+          <div class="lg:w-[500px] md:w-[500px] w-full lg:pb-0 md:pl-0 pl-10">
+            <div class="lg:flex md:flex justify-content-start gap-5">
+              <div
+                class="flex align-items-center gap-2 w-1/2 lg:pb-0 md:pb-0 pb-2"
+              >
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +183,7 @@
                     viewBox="0 0 512 512"
                   >
                     <path
-                      style="fill: #e83e8c"
+                      style="fill: #e12454"
                       d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
                     />
                   </svg>
@@ -197,7 +198,7 @@
                     viewBox="0 0 512 512"
                   >
                     <path
-                      style="fill: #e83e8c"
+                      style="fill: #e12454"
                       d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
                     />
                   </svg>
@@ -206,8 +207,12 @@
               </div>
             </div>
             <!-- 2 -->
-            <div class="flex justify-content-lg-start gap-5 pt-4 w-full">
-              <div class="flex align-items-center gap-2 w-1/2">
+            <div
+              class="lg:flex md:flex justify-content-lg-start gap-5 pt-2 w-full"
+            >
+              <div
+                class="flex align-items-center gap-2 w-1/2 lg:pb-0 md:pb-0 pb-2"
+              >
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -215,7 +220,7 @@
                     viewBox="0 0 512 512"
                   >
                     <path
-                      style="fill: #e83e8c"
+                      style="fill: #e12454"
                       d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
                     />
                   </svg>
@@ -230,7 +235,7 @@
                     viewBox="0 0 512 512"
                   >
                     <path
-                      style="fill: #e83e8c"
+                      style="fill: #e12454"
                       d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
                     />
                   </svg>
@@ -248,7 +253,7 @@
                   viewBox="0 0 512 512"
                 >
                   <path
-                    style="fill: #e83e8c"
+                    style="fill: #e12454"
                     d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
                   />
                 </svg>
@@ -462,7 +467,12 @@
 
     <!-- services section -->
 
+    <!-- swiper -->
+
+    <!-- swiper -->
+
     <!-- testimonial -->
+
     <div
       class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 lg:py-20 py-7"
     >
@@ -480,164 +490,302 @@
       </p>
 
       <!-- swiper  -->
-      <div
-        class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-3 pt-16"
-      >
-        <!-- 1 -->
-        <div class="images box_shadow_here p-5 relative rounded-lg relative">
-          <img
-            src="./assets/doctor.jpg"
-            alt="doctor"
-            class="w-[100px] h-[100px] rounded-full absolute top-[-40px] left-1/2 -translate-x-1/2 shadow-md shadow-blue-500 ring-2 object-cover ring-blue-500"
-          />
-          <div class="mt-[60px] flex justify-center gap-1">
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 448 512"
-                fill="#f95d5ddd"
-              >
-                <path
-                  d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
-                />
-              </svg>
-            </div>
-            <p
-              class="text-gray-500 tracking-wide text-justify flex items-end leading-7"
-            >
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni,
-              odio aliquam totam est praesentium excepturi? Itaque tempore
-              architecto voluptas corporis quibusdam et debitis, nam, dicta
-              dolore velit officia dolor incidunt.
-
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  viewBox="0 0 448 512"
-                  fill="#f95d5ddd"
-                >
-                  <path
-                    d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
-                  />
-                </svg>
-              </span>
-            </p>
-          </div>
-
-          <h2
-            class="text_inside text-center text-lg mt-5 text-[#f95d5ddd] font-semibold"
-          >
-            Avinash Kr <small> Manager</small>
-          </h2>
-        </div>
-        <!-- 1 -->
-        <!-- 1 -->
-        <div
-          class="images box_shadow_here p-5 relative rounded-lg relative lg:mt-0 md:mt-0 mt-16"
+      <!-- swiper -->
+      <div class="lg:w-[1120px] lg:mx-auto">
+        <swiper-container
+          style="
+            --swiper-navigation-color: #0e0d0d;
+            --swiper-pagination-color: #111111;
+          "
+          class="mySwiper"
+          pagination="true"
+          pagination-clickable="true"
         >
-          <img
-            src="./assets/doctor.jpg"
-            alt="doctor"
-            class="w-[100px] h-[100px] rounded-full absolute top-[-40px] left-1/2 -translate-x-1/2 shadow-md shadow-blue-500 ring-2 object-cover ring-blue-500"
-          />
-          <div class="mt-[60px] flex justify-center gap-1">
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 448 512"
-                fill="#f95d5ddd"
-              >
-                <path
-                  d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
-                />
-              </svg>
-            </div>
-            <p
-              class="text-gray-500 tracking-wide text-justify flex items-end leading-7"
+          <!-- single slide -->
+          <swiper-slide>
+            <!-- 1 -->
+            <div
+              class="images box_shadow_here p-5 relative rounded-lg relative w-[80%] mx-auto my-20"
             >
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni,
-              odio aliquam totam est praesentium excepturi? Itaque tempore
-              architecto voluptas corporis quibusdam et debitis, nam, dicta
-              dolore velit officia dolor incidunt.
-
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  viewBox="0 0 448 512"
-                  fill="#f95d5ddd"
+              <img
+                src="./assets/doctor.jpg"
+                alt="doctor"
+                class="w-[100px] h-[100px] rounded-full absolute top-[-40px] left-1/2 -translate-x-1/2 shadow-md shadow-blue-500 ring-2 object-cover ring-blue-500"
+              />
+              <div class="mt-[60px] flex justify-center gap-1">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 448 512"
+                    fill="#f95d5ddd"
+                  >
+                    <path
+                      d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-gray-500 tracking-wide text-justify flex items-end leading-7"
                 >
-                  <path
-                    d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
-                  />
-                </svg>
-              </span>
-            </p>
-          </div>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Magni, odio aliquam totam est praesentium excepturi? Itaque
+                  tempore architecto voluptas corporis quibusdam et debitis,
+                  nam, dicta dolore velit officia dolor incidunt.
 
-          <h2
-            class="text_inside text-center text-lg mt-5 text-[#f95d5ddd] font-semibold"
-          >
-            Avinash Kr <small> Manager</small>
-          </h2>
-        </div>
-        <!-- 1 -->
-        <!-- 1 -->
-        <div
-          class="images box_shadow_here p-5 relative rounded-lg relative lg:mt-0 md:mt-0 mt-16"
-        >
-          <img
-            src="./assets/doctor.jpg"
-            alt="doctor"
-            class="w-[100px] h-[100px] rounded-full absolute top-[-40px] left-1/2 -translate-x-1/2 shadow-md shadow-blue-500 ring-2 object-cover ring-blue-500"
-          />
-          <div class="mt-[60px] flex justify-center gap-1">
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 448 512"
-                fill="#f95d5ddd"
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1em"
+                      viewBox="0 0 448 512"
+                      fill="#f95d5ddd"
+                    >
+                      <path
+                        d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
+                      />
+                    </svg>
+                  </span>
+                </p>
+              </div>
+
+              <h2
+                class="text_inside text-center text-lg mt-5 text-[#f95d5ddd] font-semibold"
               >
-                <path
-                  d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
-                />
-              </svg>
+                Avinash Kr <small> Manager</small>
+              </h2>
             </div>
-            <p
-              class="text-gray-500 tracking-wide text-justify flex items-end leading-7"
+            <!-- 1 -->
+          </swiper-slide>
+          <!-- single slide -->
+
+          <!-- single slide -->
+          <swiper-slide>
+            <!-- 1 -->
+            <div
+              class="images box_shadow_here p-5 relative rounded-lg relative w-[80%] mx-auto my-20"
             >
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni,
-              odio aliquam totam est praesentium excepturi? Itaque tempore
-              architecto voluptas corporis quibusdam et debitis, nam, dicta
-              dolore velit officia dolor incidunt.
-
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  viewBox="0 0 448 512"
-                  fill="#f95d5ddd"
+              <img
+                src="./assets/doctor.jpg"
+                alt="doctor"
+                class="w-[100px] h-[100px] rounded-full absolute top-[-40px] left-1/2 -translate-x-1/2 shadow-md shadow-blue-500 ring-2 object-cover ring-blue-500"
+              />
+              <div class="mt-[60px] flex justify-center gap-1">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 448 512"
+                    fill="#f95d5ddd"
+                  >
+                    <path
+                      d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-gray-500 tracking-wide text-justify flex items-end leading-7"
                 >
-                  <path
-                    d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
-                  />
-                </svg>
-              </span>
-            </p>
-          </div>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Magni, odio aliquam totam est praesentium excepturi? Itaque
+                  tempore architecto voluptas corporis quibusdam et debitis,
+                  nam, dicta dolore velit officia dolor incidunt.
 
-          <h2
-            class="text_inside text-center text-lg mt-5 text-[#f95d5ddd] font-semibold"
-          >
-            Avinash Kr <small> Manager</small>
-          </h2>
-        </div>
-        <!-- 1 -->
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1em"
+                      viewBox="0 0 448 512"
+                      fill="#f95d5ddd"
+                    >
+                      <path
+                        d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
+                      />
+                    </svg>
+                  </span>
+                </p>
+              </div>
+
+              <h2
+                class="text_inside text-center text-lg mt-5 text-[#f95d5ddd] font-semibold"
+              >
+                Avinash Kr <small> Manager</small>
+              </h2>
+            </div>
+            <!-- 1 -->
+          </swiper-slide>
+          <!-- single slide -->
+
+          <!-- single slide -->
+          <swiper-slide>
+            <!-- 1 -->
+            <div
+              class="images box_shadow_here p-5 relative rounded-lg relative w-[80%] mx-auto my-20"
+            >
+              <img
+                src="./assets/doctor.jpg"
+                alt="doctor"
+                class="w-[100px] h-[100px] rounded-full absolute top-[-40px] left-1/2 -translate-x-1/2 shadow-md shadow-blue-500 ring-2 object-cover ring-blue-500"
+              />
+              <div class="mt-[60px] flex justify-center gap-1">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 448 512"
+                    fill="#f95d5ddd"
+                  >
+                    <path
+                      d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-gray-500 tracking-wide text-justify flex items-end leading-7"
+                >
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Magni, odio aliquam totam est praesentium excepturi? Itaque
+                  tempore architecto voluptas corporis quibusdam et debitis,
+                  nam, dicta dolore velit officia dolor incidunt.
+
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1em"
+                      viewBox="0 0 448 512"
+                      fill="#f95d5ddd"
+                    >
+                      <path
+                        d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
+                      />
+                    </svg>
+                  </span>
+                </p>
+              </div>
+
+              <h2
+                class="text_inside text-center text-lg mt-5 text-[#f95d5ddd] font-semibold"
+              >
+                Avinash Kr <small> Manager</small>
+              </h2>
+            </div>
+            <!-- 1 -->
+          </swiper-slide>
+          <!-- single slide -->
+          <!-- single slide -->
+          <swiper-slide>
+            <!-- 1 -->
+            <div
+              class="images box_shadow_here p-5 relative rounded-lg relative w-[80%] mx-auto my-20"
+            >
+              <img
+                src="./assets/doctor.jpg"
+                alt="doctor"
+                class="w-[100px] h-[100px] rounded-full absolute top-[-40px] left-1/2 -translate-x-1/2 shadow-md shadow-blue-500 ring-2 object-cover ring-blue-500"
+              />
+              <div class="mt-[60px] flex justify-center gap-1">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 448 512"
+                    fill="#f95d5ddd"
+                  >
+                    <path
+                      d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-gray-500 tracking-wide text-justify flex items-end leading-7"
+                >
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Magni, odio aliquam totam est praesentium excepturi? Itaque
+                  tempore architecto voluptas corporis quibusdam et debitis,
+                  nam, dicta dolore velit officia dolor incidunt.
+
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1em"
+                      viewBox="0 0 448 512"
+                      fill="#f95d5ddd"
+                    >
+                      <path
+                        d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
+                      />
+                    </svg>
+                  </span>
+                </p>
+              </div>
+
+              <h2
+                class="text_inside text-center text-lg mt-5 text-[#f95d5ddd] font-semibold"
+              >
+                Avinash Kr <small> Manager</small>
+              </h2>
+            </div>
+            <!-- 1 -->
+          </swiper-slide>
+          <!-- single slide -->
+          <!-- single slide -->
+          <swiper-slide>
+            <!-- 1 -->
+            <div
+              class="images box_shadow_here p-5 relative rounded-lg relative w-[80%] mx-auto my-20"
+            >
+              <img
+                src="./assets/doctor.jpg"
+                alt="doctor"
+                class="w-[100px] h-[100px] rounded-full absolute top-[-40px] left-1/2 -translate-x-1/2 shadow-md shadow-blue-500 ring-2 object-cover ring-blue-500"
+              />
+              <div class="mt-[60px] flex justify-center gap-1">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 448 512"
+                    fill="#f95d5ddd"
+                  >
+                    <path
+                      d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-gray-500 tracking-wide text-justify flex items-end leading-7"
+                >
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Magni, odio aliquam totam est praesentium excepturi? Itaque
+                  tempore architecto voluptas corporis quibusdam et debitis,
+                  nam, dicta dolore velit officia dolor incidunt.
+
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1em"
+                      viewBox="0 0 448 512"
+                      fill="#f95d5ddd"
+                    >
+                      <path
+                        d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
+                      />
+                    </svg>
+                  </span>
+                </p>
+              </div>
+
+              <h2
+                class="text_inside text-center text-lg mt-5 text-[#f95d5ddd] font-semibold"
+              >
+                Avinash Kr <small> Manager</small>
+              </h2>
+            </div>
+            <!-- 1 -->
+          </swiper-slide>
+          <!-- single slide -->
+        </swiper-container>
       </div>
+      <!-- swiper -->
       <!-- swiper  -->
     </div>
     <!-- testimonial -->
@@ -647,14 +795,14 @@
       <div
         class="lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 py-10 h-[700px]"
       >
-        <div class="lg:flex items-center justify-between h-[500px]">
-          <div>
+        <div class="lg:flex md:flex items-center justify-between h-[500px]">
+          <div class="">
             <div class="relative">
-              <div class="lg:w-1/2 w-full flex gap-5 relative">
+              <div class="lg:w-1/2 md:1/2 w-full flex gap-5 relative">
                 <img
                   src="./assets/doctor.jpg"
                   alt="doctor _pic"
-                  class="lg:w-[200px] lg:h-[200px] mx-auto object-cover rounded-tl-[80px] z-40 lg:block"
+                  class="lg:w-[200px] md:w-full w-full lg:h-[200px] mx-auto object-cover rounded-tl-[80px] z-40 lg:block"
                 />
                 <img
                   src="./assets/doctor.jpg"
@@ -664,21 +812,21 @@
                 <img
                   src="./assets/doctor.jpg"
                   alt="doctor _pic"
-                  class="lg:w-[150px] lg:h-[150px] object-cover relative -translate-y-[50px] rounded-tr-[70px] left-[-180px] top-[210px] z-40 lg:block hidden"
+                  class="lg:w-[200px] lg:h-[250px] object-cover relative -translate-y-[50px] rounded-br-[70px] left-[-220px] top-[210px] z-40 lg:block hidden"
                 />
                 <img
                   src="./assets/doctor.jpg"
                   alt="doctor _pic"
-                  class="lg:w-[220px] lg:h-[250px] object-cover relative -translate-y-[50px] rounded-bl-[70px] left-[-590px] top-[270px] z-40 lg:block hidden"
+                  class="lg:w-[220px] lg:h-[250px] object-cover relative -translate-y-[50px] rounded-bl-[70px] left-[-680px] top-[270px] z-40 lg:block hidden"
                 />
               </div>
               <div
-                class="lg:w-[450px] lg:h-[400px] bg-blue-500 z-0 absolute top-0 -left-[16px] rounded-xl shadow shadow-white"
+                class="lg:w-[450px] lg:h-[400px] bg-[#223a66bb] z-0 absolute top-0 -left-[16px] rounded-xl shadow shadow-white"
               ></div>
             </div>
           </div>
 
-          <div class="lg:w-1/2 w-full">
+          <div class="lg:w-1/2 md:1/2 w-full">
             <h2
               class="text-center lg:text-3xl md:text-3xl text-xl lg:pt-0 md:pt-0 pt-7 tracking-wide font-bold text-[#223a66bb] pb-7"
             >
@@ -844,29 +992,29 @@
     <!-- contact -->
 
     <!-- footer -->
-    <div class="bg-gray-800">
+    <div class="footer_color">
       <footer
         class="lg:flex md:flex sm:flex flex-wrap flex justify-between lg:w-[1120px] lg:mx-auto md:w-full w-full lg:px-0 md:px-2 px-2 py-20"
       >
         <nav class="flex flex-col">
-          <header class="footer-title text-xl text-white">Services</header>
-          <a class="link link-hover text-gray-400">Branding</a>
-          <a class="link link-hover text-gray-400">Design</a>
-          <a class="link link-hover text-gray-400">Marketing</a>
-          <a class="link link-hover text-gray-400">Advertisement</a>
+          <header class="text-2xl text-white font-bold">Services</header>
+          <a class="text-gray-400 text-base mt-5">Branding</a>
+          <a class="text-gray-400 text-base">Design</a>
+          <a class="text-gray-400 text-base">Marketing</a>
+          <a class="text-gray-400 text-base">Advertisement</a>
         </nav>
         <nav class="flex flex-col">
-          <header class="footer-title text-xl text-white">Company</header>
-          <a class="link link-hover text-gray-400">About us</a>
-          <a class="link link-hover text-gray-400">Contact</a>
-          <a class="link link-hover text-gray-400">Jobs</a>
-          <a class="link link-hover text-gray-400">Press kit</a>
+          <header class="text-2xl text-white font-bold">Company</header>
+          <a class="text-gray-400 text-base mt-5">About us</a>
+          <a class="text-gray-400 text-base">Contact</a>
+          <a class="text-gray-400 text-base">Jobs</a>
+          <a class="text-gray-400 text-base">Press kit</a>
         </nav>
         <nav class="flex flex-col">
-          <header class="footer-title text-xl text-white">Legal</header>
-          <a class="link link-hover text-gray-400">Terms of use</a>
-          <a class="link link-hover text-gray-400">Privacy policy</a>
-          <a class="link link-hover text-gray-400">Cookie policy</a>
+          <header class="text-2xl text-white font-bold">Legal</header>
+          <a class="text-gray-400 text-base mt-5">Terms of use</a>
+          <a class="text-gray-400 text-base">Privacy policy</a>
+          <a class="text-gray-400 text-base">Cookie policy</a>
         </nav>
       </footer>
     </div>
@@ -920,9 +1068,33 @@
 
     <!-- from cdn -->
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <!-- js link -->
     <script src="js/script.js"></script>
+    <script>
+      const swiperEl = document.querySelector("swiper-container");
+      Object.assign(swiperEl, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+        },
+      });
+      swiperEl.initialize();
+    </script>
     <!-- js link -->
     <!-- swiper js link -->
   </body>

@@ -42,407 +42,543 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <div class="our_courses">
-      <h1
-        class="text-center lg:text-5xl md:text-4xl text-2xl text-blue-500 font-bold underline relative z-40"
-      >
-        Our Course
-      </h1>
-      <div class="absolute z-50 bottom-0 left-1/2 -translate-x-1/2 w-[100%]">
-        <div class="w-[90%] mx-auto">
-          <button
-            class="bg-blue-500 py-2 rounded-tl-[25px] rounded-tr-[25px] text-lg font-bold text-white w-full"
-          >
-            <a href="index.html"> Home </a>|<a href="course.html">
-              Our Course</a
+    <!-- navbar  -->
+
+    <div class="bg_nav_here fixed w-full top-0 left-0 shadow bg-[#223a66bb]">
+      <div class="nav_container lg:w-[1120px] lg:mx-auto w-full lg:px-0 px-3">
+        <div
+          class="nav_wrapper lg:flex md:flex flex lg:justify-between lg:items-center md:justify-between md:items-center py-2 justify-between items-center"
+        >
+          <!-- {/*--------------- nav_logo------------ */} -->
+
+          <div class="nav_logo">
+            <h2 class="text-black text-lg font-medium">
+              <a href="index.html">
+                <div
+                  class="w-[50px] h-[50px] rounded-full bg-white flex justify-center items-center relative z-50"
+                >
+                  <img
+                    class="w-[40px] h-[40px]"
+                    src="./assets/doctor_profile.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </h2>
+          </div>
+
+          <!-- {/* ---------------nav_logo------------ */} -->
+          <!-- {/*--------------- menu items----------- */} -->
+          <div class="index_value">
+            <ul
+              id="mobile_device"
+              class="lg:flex gap-5 lg:static lg:bg-inherit absolute top-[-999px] left-[0px] lg:w-static w-[100%] bg-gray-700 lg:shadow-none shadow-md duration-500"
+            >
+              <a href="index.html">
+                <li
+                  class="index_menu text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200"
+                >
+                  Home
+                </li>
+              </a>
+
+              <a href="index.html#services">
+                <li
+                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200 index_menu"
+                >
+                  Services
+                </li>
+              </a>
+
+              <a href="appointment.html">
+                <li
+                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200 index_menu"
+                >
+                  Appointment
+                </li>
+              </a>
+              <a href="index.html#contact">
+                <li
+                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200 index_menu"
+                >
+                  Contact
+                </li>
+              </a>
+              <a href="course.html">
+                <li
+                  class="text-black text-base py-1 font-bold tracking-wide rounded-md cursor-pointer lg:mb-0 mb-2 lg:mt-0 mt-3 lg:text-start text-center text-white duration-200 index_menu"
+                >
+                  Our Course
+                </li>
+              </a>
+            </ul>
+          </div>
+          <!-- {/*-------------- menu items------------ */} -->
+          <!-- {/* mobile menu */} -->
+          <div class="lg:hidden cursor-pointer z-50 relative">
+            <div
+              id="openBtn"
+              onclick="openClick()"
+              class="lg:hidden block z-50 relative"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="2em"
+                viewBox="0 0 448 512"
+                fill="white"
+              >
+                <path
+                  d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                />
+              </svg>
+            </div>
+            <div
+              class="hidden cursor-pointer z-50 relative"
+              id="closeBtn"
+              onclick="closeClick()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="2em"
+                viewBox="0 0 384 512"
+                fill="red"
+              >
+                <path
+                  d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- {/* mobile menu */} -->
+        </div>
+      </div>
+    </div>
+    <!-- navbar  -->
+
+    <!-- heading -->
+    <div class="pt-[65px]">
+      <div class="our_coursesAppoint_bg">
+        <h1
+          class="text-center lg:text-6xl md:text-4xl text-2xl text-[#fff] font-bold relative z-40"
+        >
+          Course
+        </h1>
+        <div class="pt-5">
+          <button class="flex gap-3 text-white relative z-50">
+            <a
+              href="index.html"
+              class="text-white hover:text-[#e12454] hover:duration-200"
+            >
+              Home </a
+            >|<a
+              href="course.html"
+              class="text-white hover:text-[#e12454] hover:duration-200"
+            >
+              Course</a
             >
           </button>
         </div>
       </div>
     </div>
-    <div class="lg:w-[1120px] mx-auto md:w-full w-full lg:px-0 px-2 relative">
-      <div
-        class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 py-10"
-      >
-        <!-- single course -->
-        <div class="p-5 shadow rounded-md shadow-md-balck">
-          <img
-            class="w-full h-[200px] block rounded-md"
-            src="./assets/download.jfif"
-            alt=""
-          />
-          <h2 class="text-black text-lg pt-3 font-bold">Free Course here</h2>
-          <div class="ratting flex gap-1 pt-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-          </div>
-          <div class="course_fee pt-1">
-            <p class="text-base text-gray-600">Course Fee : 50,000 BDT</p>
-          </div>
-          <div class="buy_btn mt-3">
-            <button
-              onclick="my_modal_1.showModal()"
-              id="openModalBtn"
-              class="bg-blue-500 text-lg font-blod text-white px-5 py-2 outline-none rounded-md"
-            >
-              Buy Now
-            </button>
-          </div>
-        </div>
-        <!-- single course -->
-
-        <!-- single course -->
-        <div class="p-5 shadow rounded-md shadow-md-balck">
-          <img
-            class="w-full h-[200px] block rounded-md"
-            src="./assets/download.jfif"
-            alt=""
-          />
-          <h2 class="text-black text-lg pt-3 font-bold">Free Course here</h2>
-          <div class="ratting flex gap-1 pt-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-          </div>
-          <div class="course_fee pt-1">
-            <p class="text-base text-gray-600">Course Fee : 50,000 BDT</p>
-          </div>
-          <div class="buy_btn mt-3">
-            <button
-              onclick="my_modal_1.showModal()"
-              class="bg-blue-500 text-lg font-blod text-white px-5 py-2 outline-none rounded-md"
-            >
-              Buy Now
-            </button>
-          </div>
-        </div>
-        <!-- single course -->
-
-        <!-- single course -->
-        <div class="p-5 shadow rounded-md shadow-md-balck">
-          <img
-            class="w-full h-[200px] block rounded-md"
-            src="./assets/download.jfif"
-            alt=""
-          />
-          <h2 class="text-black text-lg pt-3 font-bold">Free Course here</h2>
-          <div class="ratting flex gap-1 pt-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-          </div>
-          <div class="course_fee pt-1">
-            <p class="text-base text-gray-600">Course Fee : 50,000 BDT</p>
-          </div>
-          <div class="buy_btn mt-3">
-            <button
-              onclick="my_modal_1.showModal()"
-              class="bg-blue-500 text-lg font-blod text-white px-5 py-2 outline-none rounded-md"
-            >
-              Buy Now
-            </button>
-          </div>
-        </div>
-        <!-- single course -->
-
-        <!-- single course -->
-        <div class="p-5 shadow rounded-md shadow-md-balck">
-          <img
-            class="w-full h-[200px] block rounded-md"
-            src="./assets/download.jfif"
-            alt=""
-          />
-          <h2 class="text-black text-lg pt-3 font-bold">Free Course here</h2>
-          <div class="ratting flex gap-1 pt-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 576 512"
-              fill="gold"
-            >
-              <path
-                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-              />
-            </svg>
-          </div>
-          <div class="course_fee pt-1">
-            <p class="text-base text-gray-600">Course Fee : 50,000 BDT</p>
-          </div>
-          <div class="buy_btn mt-3">
-            <button
-              onclick="my_modal_1.showModal()"
-              class="bg-blue-500 text-lg font-blod text-white px-5 py-2 outline-none rounded-md"
-            >
-              Buy Now
-            </button>
-          </div>
-        </div>
-        <!-- single course -->
-      </div>
-      <!-- modal  -->
-
-      <div>
-        <dialog id="my_modal_1" class="modal w-full lg:px-0 px-2">
-          <div class="modal-box bg-white">
-            <h3 class="font-bold text-2xl text-blue-500 text-center uppercase">
-              Sign Up
-            </h3>
-
-            <div class="modal-action">
-              <div class="w-full">
-                <div class="input_text text-start w-[80%] mx-auto">
-                  <label for="password" class="text-xl font-bold text-blue-400"
-                    >Name</label
-                  >
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    class="w-full text-lg font-medium px-2 py-2 outline-none placeholder:font-blod"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div class="input_text text-start w-[80%] mx-auto pt-2">
-                  <label for="password" class="text-xl font-bold text-blue-400"
-                    >Email</label
-                  >
-                  <input
-                    type="email"
-                    name="email"
-                    id="name"
-                    class="w-full text-lg font-medium px-2 py-2 outline-none placeholder:font-blod"
-                    placeholder="Your Email"
-                  />
-                </div>
-                <div class="input_text text-start w-[80%] mx-auto pt-2">
-                  <label for="password" class="text-xl font-bold text-blue-400"
-                    >Password</label
-                  >
-                  <input
-                    type="password"
-                    name="password"
-                    id="name"
-                    class="w-full text-lg font-medium px-2 py-2 outline-none placeholder:font-blod w-full"
-                    placeholder="Your Password"
-                  />
-                </div>
-                <div class="w-full">
-                  <div class="btn_singUp text-start w-[80%] mx-auto pt-6">
-                    <button
-                      class="px-6 py-2 bg-blue-500 text-lg font-bold text-white rounded-lg text-center w-full active"
-                    >
-                      Sign Up
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <form method="dialog">
-                <!-- if there is a button in form, it will close the modal -->
-
-                <button class="absolute right-0 top-0 px-2 pt-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="2em"
-                    viewBox="0 0 512 512"
-                  >
-                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                    <path
-                      d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
-                    />
-                  </svg>
-                </button>
-              </form>
+    <!-- heading -->
+    <div class="bg-[#f4f9fc]">
+      <div class="lg:w-[1120px] mx-auto md:w-full w-full lg:px-0 px-2 relative">
+        <div
+          class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 py-10"
+        >
+          <!-- single course -->
+          <div class="p-5 shadow rounded-md shadow-md-balck">
+            <img
+              class="w-full h-[200px] block rounded-md"
+              src="./assets/download.jfif"
+              alt=""
+            />
+            <h2 class="text-black text-lg pt-3 font-bold">Free Course here</h2>
+            <div class="ratting flex gap-1 pt-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+            </div>
+            <div class="course_fee pt-1">
+              <p class="text-base text-gray-600">Course Fee : 50,000 BDT</p>
+            </div>
+            <div class="buy_btn mt-3">
+              <button
+                onclick="my_modal_1.showModal()"
+                id="openModalBtn"
+                class="bg-[#223a66] hover:bg-[#e12454] hover:duration-200 font-bold text-lg font-blod text-white px-5 py-2 outline-none rounded-md"
+              >
+                Buy Now
+              </button>
             </div>
           </div>
-        </dialog>
-      </div>
+          <!-- single course -->
 
-      <!-- modal  -->
+          <!-- single course -->
+          <div class="p-5 shadow rounded-md shadow-md-balck">
+            <img
+              class="w-full h-[200px] block rounded-md"
+              src="./assets/download.jfif"
+              alt=""
+            />
+            <h2 class="text-black text-lg pt-3 font-bold">Free Course here</h2>
+            <div class="ratting flex gap-1 pt-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+            </div>
+            <div class="course_fee pt-1">
+              <p class="text-base text-gray-600">Course Fee : 50,000 BDT</p>
+            </div>
+            <div class="buy_btn mt-3">
+              <button
+                onclick="my_modal_1.showModal()"
+                class="bg-[#223a66] hover:bg-[#e12454] hover:duration-200 font-bold text-lg font-blod text-white px-5 py-2 outline-none rounded-md"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <!-- single course -->
+
+          <!-- single course -->
+          <div class="p-5 shadow rounded-md shadow-md-balck">
+            <img
+              class="w-full h-[200px] block rounded-md"
+              src="./assets/download.jfif"
+              alt=""
+            />
+            <h2 class="text-black text-lg pt-3 font-bold">Free Course here</h2>
+            <div class="ratting flex gap-1 pt-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+            </div>
+            <div class="course_fee pt-1">
+              <p class="text-base text-gray-600">Course Fee : 50,000 BDT</p>
+            </div>
+            <div class="buy_btn mt-3">
+              <button
+                onclick="my_modal_1.showModal()"
+                class="bg-[#223a66] hover:bg-[#e12454] hover:duration-200 font-bold text-lg font-blod text-white px-5 py-2 outline-none rounded-md"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <!-- single course -->
+
+          <!-- single course -->
+          <div class="p-5 shadow rounded-md shadow-md-balck">
+            <img
+              class="w-full h-[200px] block rounded-md"
+              src="./assets/download.jfif"
+              alt=""
+            />
+            <h2 class="text-black text-lg pt-3 font-bold">Free Course here</h2>
+            <div class="ratting flex gap-1 pt-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="gold"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                />
+              </svg>
+            </div>
+            <div class="course_fee pt-1">
+              <p class="text-base text-gray-600">Course Fee : 50,000 BDT</p>
+            </div>
+            <div class="buy_btn mt-3">
+              <button
+                onclick="my_modal_1.showModal()"
+                class="bg-[#223a66] hover:bg-[#e12454] hover:duration-200 text-lg font-blod text-white px-5 py-2 outline-none rounded-md font-bold"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <!-- single course -->
+        </div>
+        <!-- modal  -->
+
+        <div>
+          <dialog id="my_modal_1" class="modal w-full lg:px-0 px-2">
+            <div class="modal-box bg-white">
+              <div>
+                <h3
+                  class="font-bold text-2xl text-[#223a66] text-center uppercase"
+                >
+                  Sign Up
+                </h3>
+                <div
+                  class="w-[50px] h-[4px] bg-[#e12454] mx-auto rounded-full"
+                ></div>
+              </div>
+              <div class="modal-action">
+                <div class="w-full">
+                  <div class="input_text text-start w-[80%] mx-auto">
+                    <label
+                      for="password"
+                      class="text-xl font-bold text-[#223a66]"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      class="py-3 px-3 bg-[#f4f9fc] placeholder:text-[#6c757d] outline-none border border-[rgba(0, 0, 0, 0.05)] text-base w-full"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div class="input_text text-start w-[80%] mx-auto pt-2">
+                    <label
+                      for="password"
+                      class="text-xl font-bold text-[#223a66]"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      name="email"
+                      id="name"
+                      class="py-3 px-3 bg-[#f4f9fc] placeholder:text-[#6c757d] outline-none border border-[rgba(0, 0, 0, 0.05)] text-base w-full"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                  <div class="input_text text-start w-[80%] mx-auto pt-2">
+                    <label
+                      for="password"
+                      class="text-xl font-bold text-[#223a66]"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      name="password"
+                      id="name"
+                      class="py-3 px-3 bg-[#f4f9fc] placeholder:text-[#6c757d] outline-none border border-[rgba(0, 0, 0, 0.05)] text-base w-full"
+                      placeholder="Your Password"
+                    />
+                  </div>
+                  <div class="w-full">
+                    <div class="btn_singUp text-start w-[80%] mx-auto pt-6">
+                      <button
+                        class="w-[200px] py-2 bg-[#223a66] text-white rounded-full text-lg font-bold hover:bg-[#e12454] hover:duration-200"
+                      >
+                        Sign Up
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+
+                  <button class="absolute right-0 top-0 px-2 pt-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="2em"
+                      viewBox="0 0 512 512"
+                    >
+                      <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                      <path
+                        d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
+                      />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+        </div>
+
+        <!-- modal  -->
+      </div>
     </div>
     <!-- Button to open the modal -->
 
     <script src="js/course.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

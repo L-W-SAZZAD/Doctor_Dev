@@ -4,7 +4,7 @@ const closeBtn = document.querySelector("#closeBtn");
 
 const openClick = () => {
   console.log("click");
-  mobile_device.style.top = "83.2px";
+  mobile_device.style.top = "65.2px";
   openBtn.style.display = "none";
   closeBtn.style.display = "block";
 };
