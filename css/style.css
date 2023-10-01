@@ -1,6 +1,6 @@
 /* font */
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,600;1,700;1,800&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* font */
 * {
@@ -34,10 +34,11 @@ a {
 body {
   font-size: initial;
   background-color: #fff;
-  font-family: "Open Sans", sans-serif, "Roboto", sans-serif, "Lato", sans-serif;
+  font-family: "Exo 2", sans-serif;
   letter-spacing: 0.025em;
   text-decoration: none !important;
   overflow-x: hidden;
+  color: #223a66bb;
 }
 
 button {
@@ -331,7 +332,10 @@ button {
 }
 #name {
   background: #e6e6e6 !important;
-  box-shadow: 1px 1px 1px 1px #111112;
+  box-shadow: 0px 0px 30px 0px rgba(0, 42, 106, 0.1);
+}
+.box_shadow_here {
+  box-shadow: 0px 0px 30px 0px rgba(0, 42, 106, 0.1);
 }
 .active:active {
   background: rgb(25, 25, 25);
